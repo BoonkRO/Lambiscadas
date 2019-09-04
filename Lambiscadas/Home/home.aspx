@@ -27,7 +27,7 @@
 					</h3>
 					<div class="row">
 						<div class="col-md-3">
-							<h4 class="NombreArticuloLink">Funko Pop DeadPool</h4><img alt="Bootstrap Image Preview" src="../imgs/funkoDeadPool400.jpg">
+							<h4 class="NombreArticuloLink">Funko Pop DeadPool</h4><img alt="Bootstrap Image Preview" src="../imgs/funkoDeadPool400.jpg" id="1" onclick="verArticulo(this.id)">
 							<dl>
 								<dt>
 									Descripción
@@ -41,7 +41,7 @@
 							</button>
 						</div>
 						<div class="col-md-3">
-							<h4 class="NombreArticuloLink">Funko Pop DeadPool</h4><img alt="Bootstrap Image Preview" src="../imgs/funkoBareBears.jpg">
+							<h4 class="NombreArticuloLink">Funko Pop DeadPool</h4><img alt="Bootstrap Image Preview" src="../imgs/funkoBareBears.jpg" id="2" onclick="verArticulo(this.id)">
 							<dl>
 								<dt>
 									Descripción
@@ -55,7 +55,7 @@
 							</button>
 						</div>
 						<div class="col-md-3">
-							<h4 class="NombreArticuloLink">Funko Pop DeadPool</h4><img alt="Bootstrap Image Preview" src="../imgs/funkoJerry.jpeg">
+							<h4 class="NombreArticuloLink">Funko Pop DeadPool</h4><img alt="Bootstrap Image Preview" src="../imgs/funkoJerry.jpeg" id="3" onclick="verArticulo(this.id)">
 							<dl>
 								<dt>
 									Descripción
@@ -69,7 +69,7 @@
 							</button>
 						</div>
 						<div class="col-md-3">
-							<h4 class="NombreArticuloLink">Funko Pop DeadPool</h4><img alt="Bootstrap Image Preview" src="../imgs/funkoSquirtle.jpg">
+							<h4 class="NombreArticuloLink">Funko Pop DeadPool</h4><img alt="Bootstrap Image Preview" src="../imgs/funkoSquirtle.jpg" id="4" onclick="verArticulo(this.id)">
 							<dl>
 								<dt>
 									Descripción
@@ -92,7 +92,7 @@
 					</h3>
 					<div class="row">
 						<div class="col-md-3">
-							 <h4 class="NombreArticuloLink">Funko Pop DeadPool</h4><img alt="Bootstrap Image Preview" src="../imgs/funkoTenShinHan.jpg">
+							 <h4 class="NombreArticuloLink">Funko Pop DeadPool</h4><img alt="Bootstrap Image Preview" src="../imgs/funkoTenShinHan.jpg" id="5" onclick="verArticulo(this.id)">
                             <dl>
 								<dt>
 									Descripción
@@ -106,7 +106,7 @@
 							</button>
 						</div>
 						<div class="col-md-3">
-							 <h4 class="NombreArticuloLink">Funko Pop DeadPool</h4><img alt="Bootstrap Image Preview" src="../imgs/funkoMrBurns.jpg">
+							 <h4 class="NombreArticuloLink">Funko Pop DeadPool</h4><img alt="Bootstrap Image Preview" src="../imgs/funkoMrBurns.jpg" id="6" onclick="verArticulo(this.id)">
                             <dl>
 								<dt>
 									Descripción
@@ -120,7 +120,7 @@
 							</button>
 						</div>
 						<div class="col-md-3">
-							 <h4 class="NombreArticuloLink">Funko Pop DeadPool</h4><img alt="Bootstrap Image Preview" src="../imgs/funkoCapitanAmerica.jpg"> 
+							 <h4 class="NombreArticuloLink">Funko Pop DeadPool</h4><img alt="Bootstrap Image Preview" src="../imgs/funkoCapitanAmerica.jpg" id="7" onclick="verArticulo(this.id)"> 
                             <dl>
 								<dt>
 									Descripción
@@ -134,7 +134,7 @@
 							</button>
 						</div>
 						<div class="col-md-3">
-							 <h4 class="NombreArticuloLink">Funko Pop DeadPool</h4><img alt="Bootstrap Image Preview" src="../imgs/funkoDeadPool400.jpg" onclick="verArticulo(this.id)">
+							 <h4 class="NombreArticuloLink">Funko Pop DeadPool</h4><img alt="Bootstrap Image Preview" src="../imgs/funkoKaiBubbles.jpg" id="8" onclick="verArticulo(this.id)">
                             <dl>
 								<dt>
 									Descripción

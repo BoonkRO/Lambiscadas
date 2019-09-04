@@ -1,0 +1,16 @@
+﻿body {
+    /*background-image: url(../../Images/sn_bg_loginhorizontdos.jpg);*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.divLogin {
+    margin-top: 15%;
+    padding: 5%;
+    border: 2px solid;
+    
+    background-color: #90EE90;
+}
+

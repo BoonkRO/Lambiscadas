@@ -139,8 +139,13 @@
     <Content Include="imgs\funkoMrBurns.jpg" />
     <Content Include="imgs\funkoSquirtle.jpg" />
     <Content Include="imgs\funkoTenShinHan.jpg" />
+    <Content Include="imgs\Producto\funkoCapitanAmerica.jpg" />
+    <Content Include="Login\css\basico.css" />
+    <Content Include="Login\js\basico.js" />
+    <Content Include="Login\login.aspx" />
     <Content Include="Producto\css\basico.css" />
     <Content Include="Producto\handlerProducto.ashx" />
+    <Content Include="Login\handlerLogin.ashx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Home\home.aspx" />
     <Content Include="Home\js\basico.js" />
@@ -202,12 +207,15 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Clases\Basico.cs" />
     <Compile Include="Clases\ConnectionString.cs" />
     <Compile Include="Clases\DatabaseConnection.cs" />
     <Compile Include="Clases\Extensions.cs" />
+    <Compile Include="Clases\GestionLogIn.cs" />
     <Compile Include="Clases\Producto\GestionProducto.cs" />
     <Compile Include="Clases\Producto\Producto.cs" />
     <Compile Include="Clases\Recurso.cs" />
+    <Compile Include="Clases\Usuario\Usuario.cs" />
     <Compile Include="Clases\Utilities.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -235,6 +243,16 @@
     </Compile>
     <Compile Include="Home\home.aspx.designer.cs">
       <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\handlerLogin.ashx.cs">
+      <DependentUpon>handlerLogin.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Producto\handlerProducto.ashx.cs">
       <DependentUpon>handlerProducto.ashx</DependentUpon>

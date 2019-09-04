@@ -7,9 +7,9 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Lambiscadas.Producto {
+namespace Lambiscadas.Login {
     
     
-    public partial class producto {
+    public partial class login {
     }
 }

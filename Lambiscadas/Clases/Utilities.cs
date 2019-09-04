@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -134,5 +135,142 @@ namespace Lambiscadas.Clases
             if (s.Contains("\\")) s = s.Replace("\\", "");
             return s;
         }
+
+        public static bool validezUsuario(HttpRequest hr)
+        {
+            try
+            {
+
+                if ((hr.Cookies["token"] != null) && !string.IsNullOrEmpty(hr.Cookies["token"].Value) && hr.Cookies["token"].Value.Contains('I'))
+                {
+                    if (hr.Cookies["token"].Value.Contains('='))
+                    {
+                        string tokenUsuario = Utilities.tratarParam(hr.Cookies["token"].Value.Split('=')[1]);
+                        if (Utilities.comprobarValidezUsuario(tokenUsuario) == 1)
+                        {
+                            int idUsuario = Convert.ToInt32(tokenUsuario.Split('I')[0]);
+                            if (idUsuario > 0)
+                            {
+                                string query = $@"SELECT TOP 1 * FROM Administrador WHERE idAdmin = {idUsuario} AND token = '{Utilities.tratarParam(tokenUsuario.Split('I')[1])}'";
+                                DataTable dt = DatabaseConnection.executeNonQueryDT(query, CommandType.Text, ConnectionString.Lambiscadas);
+                                if (dt.Rows.Count > 0)
+                                {
+                                    return true;
+                                }
+
+                                //int rol = Convert.ToInt32(DatabaseConnection.executeScalar(query, CommandType.Text, ConnectionString.SomNautic));
+                                //if(rol == 1) return true;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        string tokenUsuario = Utilities.tratarParam(hr.Cookies["token"].Value);
+                        if (Utilities.comprobarValidezUsuario(tokenUsuario) == 1)
+                        {
+                            int idUsuario = Convert.ToInt32(tokenUsuario.Split('I')[0]);
+                            if (idUsuario > 0)
+                            {
+                                string query = $@"SELECT TOP 1 * FROM Administrador WHERE idAdmin = {idUsuario} AND token = '{Utilities.tratarParam(tokenUsuario.Split('I')[1])}'";
+                                DataTable dt = DatabaseConnection.executeNonQueryDT(query, CommandType.Text, ConnectionString.Lambiscadas);
+                                if (dt.Rows.Count > 0)
+                                {
+                                    return true;
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    // En este caso tenemos el token por parámetro en la url
+                    // y si hemos llegado a este punto es por que la cookie y la sesión no está creada
+                    // La creamos
+
+                    string tokenUsuario = Utilities.getParam(hr, "token");
+                    if (Utilities.comprobarValidezUsuario(tokenUsuario) == 1)
+                    {
+                        int idUsuario = Convert.ToInt32(tokenUsuario.Split('I')[0]);
+                        if (idUsuario > 0)
+                        {
+                            string query = $@"SELECT TOP 1 * FROM Administrador WHERE idAdmin = {idUsuario} AND token = '{Utilities.tratarParam(tokenUsuario.Split('I')[1])}'";
+                            int rol = Convert.ToInt32(DatabaseConnection.executeScalar(query, CommandType.Text, ConnectionString.Lambiscadas));
+                            if (rol == 1)
+                            {
+                                Basico.crearCookie(tokenUsuario);
+                                return true;
+                            }
+                        }
+                    }
+
+                }
+
+                return false;
+
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
+        public static int comprobarValidezUsuario(string tokenUsuario)
+        {
+            string query = string.Empty;
+            try
+            {
+                if (string.IsNullOrEmpty(tokenUsuario) || tokenUsuario == "undefined" || !tokenUsuario.Contains('I'))
+                    return -1;
+
+                if (tokenUsuario.Contains(';')) tokenUsuario = tokenUsuario.Split(';')[0];
+
+                if (tokenUsuario.Contains("token=id=")) tokenUsuario = tokenUsuario.Replace("token=id=", "");
+                if (tokenUsuario.Contains("id=")) tokenUsuario = tokenUsuario.Replace("id=", "");
+
+                if (tokenUsuario.Contains('I'))
+                {
+                    string idUsuario = tokenUsuario.Split('I')[0];
+
+                    string passToken = tokenUsuario.Replace(tokenUsuario.Split('I')[0] + "I", "");
+                    if (Convert.ToInt32(idUsuario) > 0)
+                    {
+                        //query = "SELECT TOP 1 idAdmin FROM Administrador WHERE (token = '" + tokenUsuario + "') AND idAdmin = " + idUsuario + " AND Activo = 1";
+                        query = "SELECT TOP 1 idUsuario FROM Usuarios WHERE idUsuario = " + idUsuario + " AND token = '" + tokenUsuario.Split('I')[1] + "'";
+                        DataTable dt = DatabaseConnection.executeNonQueryDT(query, CommandType.Text, ConnectionString.Lambiscadas);
+                        if (dt.Rows.Count > 0)
+                        {
+                            return 1;
+                        }
+                    }
+                }
+                return -1;
+            }
+            catch (Exception e)
+            {
+                return -1;
+            }
+        }
+
+        internal static bool isLocalHost()
+        {
+#if DEBUG
+            return true;
+#endif
+            return false;
+        }
+
+        public static bool updateGuid(int idUsuario, string guid)
+        {
+            try
+            {
+                string query = $@"UPDATE Usuarios SET token='{guid}' WHERE idUsuario={idUsuario}";
+                return (DatabaseConnection.executeNonQueryInt(query, CommandType.Text, ConnectionString.Lambiscadas) == 1);
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
     }
 }

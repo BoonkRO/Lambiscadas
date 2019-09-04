@@ -50,15 +50,18 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Nombre de la aplicación</a>
+                    <a class="navbar-brand" runat="server" href="~/Home/home.aspx">Lambiscadas</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Inicio</a></li>
-                        <li><a runat="server" href="~/About">Acerca de</a></li>
+                        <li><a runat="server" href="~/Home/home.aspx">Home</a></li>
+                        <li><a runat="server" href="~/About">Categorias</a></li>
                         <li><a runat="server" href="~/Contact">Contacto</a></li>
                     </ul>
                     <div class="divIcons">
+                        <a href="../Login/login.aspx" id="divPerfilUsuario">
+                            <span>Iniciar Sesión</span>
+                        </a>
                         <a href="#">
                             <span class="glyphicon glyphicon-shopping-cart"></span>
                         </a>
