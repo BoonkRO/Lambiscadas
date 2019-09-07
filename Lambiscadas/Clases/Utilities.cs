@@ -151,7 +151,7 @@ namespace Lambiscadas.Clases
                             int idUsuario = Convert.ToInt32(tokenUsuario.Split('I')[0]);
                             if (idUsuario > 0)
                             {
-                                string query = $@"SELECT TOP 1 * FROM Administrador WHERE idAdmin = {idUsuario} AND token = '{Utilities.tratarParam(tokenUsuario.Split('I')[1])}'";
+                                string query = $@"SELECT TOP 1 * FROM Usuarios WHERE idUsuario = {idUsuario} AND token = '{Utilities.tratarParam(tokenUsuario)}'";
                                 DataTable dt = DatabaseConnection.executeNonQueryDT(query, CommandType.Text, ConnectionString.Lambiscadas);
                                 if (dt.Rows.Count > 0)
                                 {
@@ -171,7 +171,7 @@ namespace Lambiscadas.Clases
                             int idUsuario = Convert.ToInt32(tokenUsuario.Split('I')[0]);
                             if (idUsuario > 0)
                             {
-                                string query = $@"SELECT TOP 1 * FROM Administrador WHERE idAdmin = {idUsuario} AND token = '{Utilities.tratarParam(tokenUsuario.Split('I')[1])}'";
+                                string query = $@"SELECT TOP 1 * FROM Usuarios WHERE idUsuario = {idUsuario} AND token = '{Utilities.tratarParam(tokenUsuario)}'";
                                 DataTable dt = DatabaseConnection.executeNonQueryDT(query, CommandType.Text, ConnectionString.Lambiscadas);
                                 if (dt.Rows.Count > 0)
                                 {
@@ -193,7 +193,7 @@ namespace Lambiscadas.Clases
                         int idUsuario = Convert.ToInt32(tokenUsuario.Split('I')[0]);
                         if (idUsuario > 0)
                         {
-                            string query = $@"SELECT TOP 1 * FROM Administrador WHERE idAdmin = {idUsuario} AND token = '{Utilities.tratarParam(tokenUsuario.Split('I')[1])}'";
+                            string query = $@"SELECT TOP 1 * FROM Usuarios WHERE idUsuario = {idUsuario} AND token = '{Utilities.tratarParam(tokenUsuario)}'";
                             int rol = Convert.ToInt32(DatabaseConnection.executeScalar(query, CommandType.Text, ConnectionString.Lambiscadas));
                             if (rol == 1)
                             {
@@ -231,11 +231,9 @@ namespace Lambiscadas.Clases
                 {
                     string idUsuario = tokenUsuario.Split('I')[0];
 
-                    string passToken = tokenUsuario.Replace(tokenUsuario.Split('I')[0] + "I", "");
                     if (Convert.ToInt32(idUsuario) > 0)
                     {
-                        //query = "SELECT TOP 1 idAdmin FROM Administrador WHERE (token = '" + tokenUsuario + "') AND idAdmin = " + idUsuario + " AND Activo = 1";
-                        query = "SELECT TOP 1 idUsuario FROM Usuarios WHERE idUsuario = " + idUsuario + " AND token = '" + tokenUsuario.Split('I')[1] + "'";
+                        query = "SELECT TOP 1 idUsuario FROM Usuarios WHERE idUsuario = " + idUsuario + " AND token = '" + tokenUsuario + "'";
                         DataTable dt = DatabaseConnection.executeNonQueryDT(query, CommandType.Text, ConnectionString.Lambiscadas);
                         if (dt.Rows.Count > 0)
                         {

@@ -65,7 +65,7 @@
                         <a href="#">
                             <span class="glyphicon glyphicon-shopping-cart"></span>
                         </a>
-                        <a href="#">
+                        <a href="../CerrarSesion/CerrarSesion.aspx">
                             <span class="glyphicon glyphicon-log-out"></span>
                         </a>
                     </div>

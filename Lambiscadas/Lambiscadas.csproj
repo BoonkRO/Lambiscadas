@@ -106,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="CerrarSesion\CerrarSesion.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -207,6 +208,13 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CerrarSesion\CerrarSesion.aspx.cs">
+      <DependentUpon>CerrarSesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CerrarSesion\CerrarSesion.aspx.designer.cs">
+      <DependentUpon>CerrarSesion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Clases\Basico.cs" />
     <Compile Include="Clases\ConnectionString.cs" />
     <Compile Include="Clases\DatabaseConnection.cs" />

@@ -12,9 +12,9 @@ function getDatosLogIn() {
     var password = $("#password").val();
 
     if (email == "") {
-        alert("Campo 'email' no puede estar vacío.");
+        return alert("Campo 'email' no puede estar vacío.");
     } else if (password == "") {
-        alert("Campo 'password' no puede estar vacío.");
+        return alert("Campo 'password' no puede estar vacío.");
     }
 
     $.ajax({
@@ -22,11 +22,14 @@ function getDatosLogIn() {
         url: "handlerLogin.ashx?op=getDatosLogin",
         data: { "Email": email, "Password": password },
         success: function (data) {
-            alert(data);
-            if (!data) {
+            if (data == "-1") {
                 alert("Email o contraseña incorrecto.");
+            } else if (data == "1") {
+                location.href = "../Home/home.aspx";
+            } else {
+                alert("Ups...");
+                location.reload();
             }
-            location.href = "../Home/home.aspx";
         },
         error: function () {
             alert("Algo ha salido mal.");

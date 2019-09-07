@@ -58,10 +58,10 @@ namespace Lambiscadas.Clases.Usuario
             bool correcto = false;
             try
             {
-                if (token.Contains('I'))
-                {
-                    token = token.Split('I')[1];
-                }
+                //if (token.Contains('I'))
+                //{
+                //    token = token.Split('I')[1];
+                //}
 
                 string query = $@"SELECT TOP 1 usu.idUsuario, usu.Nombre, usu.Apellidos, usu.DNI, usu.Telefono, usu.Email, usu.Direccion, usu.CP, usu.Password, usu.token FROM Usuarios usu where usu.token = '{token}'";
                 DataTable dt = DatabaseConnection.executeNonQueryDT(query, CommandType.Text, ConnectionString.Lambiscadas);

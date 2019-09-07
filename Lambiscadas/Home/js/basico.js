@@ -1,71 +1,43 @@
 ﻿$(document).ready(function () {
-    //$.ajax({
-    //    type: "GET",
-    //    url: "handlerHome.ashx?op=getProducts",
-    //    dataType: "json",
-    //    success: function (data) {
-    //        BoxProducto();
-    //    },
-    //    error: function () {
-    //        alert("Algo ha salido mal.");
-    //    }
-    //});
+    $.ajax({
+        type: "GET",
+        url: "handlerHome.ashx?op=getProducts",
+        dataType: "json",
+        success: function (data) {
+            BoxProducto(data);
+        },
+        error: function () {
+            alert("Algo ha salido mal.");
+        }
+    });
 });
 
 
 
 
-function BoxProducto() {
-    var bucle = 4;
-    var divRecomendados = document.getElementById("contentRecomendados");
+function BoxProducto(data) {
+    
+    var NombreProducto = document.getElementsByClassName("NombreProducto");
+    var DescripcionProducto = document.getElementsByClassName("DescProducto");
+    var PrecioProducto = document.getElementsByClassName("PrecioProducto");
+    var ImagenProducto = document.getElementsByClassName("ImagenProducto");
+    for (var i = 0; i < data.length; i++) {
+        data[i].Orden = Math.floor(Math.random() * 20);
+    }
 
-    var ruta = "../imgs/funkoDeadPool400.jpg";
+    data = data.sort((a, b) => (a.Orden > b.Orden) ? 1 : ((b.Orden > a.Orden) ? -1 : 0));
 
-    for (let i = 0; i < bucle; i++) {
-        var createBoxProducto = document.createElement("div");
-        createBoxProducto.setAttribute("class", "boxProducto");
-
-        divRecomendados.appendChild(createBoxProducto);
-
-        var createDivFoto = document.createElement("div");
-        createDivFoto.setAttribute("class", "fotoProducto");
-        var img = document.createElement("img");
-        img.setAttribute("src", ruta);
-        createDivFoto.appendChild(img);
-
-        document.getElementsByClassName("boxProducto")[i].appendChild(createDivFoto);
-
-        var createDivDesc = document.createElement("div");
-        createDivDesc.setAttribute("class", "descripcionProducto");
-
-        var spanDesc = document.createElement("span");
-        spanDesc.setAttribute("class", "divDesc");
-        createDivDesc.appendChild(spanDesc);
-
-        document.getElementsByClassName("boxProducto")[i].appendChild(createDivDesc);
-        document.getElementsByClassName("divDesc")[i].innerHTML = "descipcion del producto";
-
-        var createDivPrecio = document.createElement("div");
-        createDivPrecio.setAttribute("class", "precioProducto");
-
-        var spanPrecio = document.createElement("span");
-        spanPrecio.setAttribute("class", "divPrecio");
-        createDivPrecio.appendChild(spanPrecio);
-
-        document.getElementsByClassName("boxProducto")[i].appendChild(createDivPrecio);
-        document.getElementsByClassName("divPrecio")[i].innerHTML = "15.50€";
-
-        var botonCarro = document.createElement("input");
-        botonCarro.setAttribute("type", "button");
-        botonCarro.setAttribute("class", "botonCarro");
-        botonCarro.setAttribute("value", "Añadir al Carro");
-        botonCarro.setAttribute("id", "1" /*idProducto*/);
-
-        document.getElementsByClassName("boxProducto")[i].appendChild(botonCarro);
+    for (let i = 0; i < data.length; i++) {
+        NombreProducto[i].innerHTML = data[i].Nombre;
+        DescripcionProducto[i].innerHTML = data[i].Descripcion;;
+        PrecioProducto[i].innerHTML = data[i].Precio + " €";
+        ImagenProducto[i].src = "../imgs/" + data[i].idProducto + ".jpg";
+        ImagenProducto[i].id = data[i].idProducto;
 
     }
 
 }
+
 
 function verArticulo(idProducto) {
     location.href = "../Producto/producto.aspx?idProducto=" + idProducto;
