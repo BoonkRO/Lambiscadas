@@ -39,6 +39,3 @@ function BoxProducto(data) {
 }
 
 
-function verArticulo(idProducto) {
-    location.href = "../Producto/producto.aspx?idProducto=" + idProducto;
-}

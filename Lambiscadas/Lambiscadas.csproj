@@ -144,9 +144,13 @@
     <Content Include="Login\css\basico.css" />
     <Content Include="Login\js\basico.js" />
     <Content Include="Login\login.aspx" />
+    <Content Include="PanelAdministrador\css\basico.css" />
+    <Content Include="PanelAdministrador\index.aspx" />
+    <Content Include="PanelAdministrador\js\basico.js" />
     <Content Include="Producto\css\basico.css" />
     <Content Include="Producto\handlerProducto.ashx" />
     <Content Include="Login\handlerLogin.ashx" />
+    <Content Include="PanelAdministrador\handlerPanelAdministrador.ashx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Home\home.aspx" />
     <Content Include="Home\js\basico.js" />
@@ -220,6 +224,7 @@
     <Compile Include="Clases\DatabaseConnection.cs" />
     <Compile Include="Clases\Extensions.cs" />
     <Compile Include="Clases\GestionLogIn.cs" />
+    <Compile Include="Clases\PanelAdministrador\GestionPanelAdministrador.cs" />
     <Compile Include="Clases\Producto\GestionProducto.cs" />
     <Compile Include="Clases\Producto\Producto.cs" />
     <Compile Include="Clases\Recurso.cs" />
@@ -261,6 +266,16 @@
     </Compile>
     <Compile Include="Login\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PanelAdministrador\handlerPanelAdministrador.ashx.cs">
+      <DependentUpon>handlerPanelAdministrador.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PanelAdministrador\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PanelAdministrador\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Producto\handlerProducto.ashx.cs">
       <DependentUpon>handlerProducto.ashx</DependentUpon>

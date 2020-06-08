@@ -54,18 +54,18 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/Home/home.aspx">Home</a></li>
-                        <li><a runat="server" href="~/About">Categorias</a></li>
+                        <li><a runat="server" href="~/Home/home.aspx">Inicio</a></li>
                         <li><a runat="server" href="~/Contact">Contacto</a></li>
+                        <li><a runat="server" href="~/PanelAdministrador/index.aspx" id="botonAccesoPanelAdmin">Administración</a></li>
                     </ul>
                     <div class="divIcons">
                         <a href="../Login/login.aspx" id="divPerfilUsuario">
                             <span>Iniciar Sesión</span>
                         </a>
-                        <a href="#">
+                        <a href="#" id="divCarritoPrincipal">
                             <span class="glyphicon glyphicon-shopping-cart"></span>
                         </a>
-                        <a href="../CerrarSesion/CerrarSesion.aspx">
+                        <a href="../CerrarSesion/CerrarSesion.aspx" id="BotonCerrarSesion">
                             <span class="glyphicon glyphicon-log-out"></span>
                         </a>
                     </div>
@@ -88,7 +88,7 @@
     <script type='text/javascript' src='../js/jquery-3.2.1.min.js'></script>
 
     <!-- My Javascript -->
-    <script type='text/javascript' src='js/basico.js'></script>
+    <script type='text/javascript' src='../js/basico.js'></script>
 
     <!-- My Bootstrap -->
     <script src="../js/bootstrap.min.js"></script>

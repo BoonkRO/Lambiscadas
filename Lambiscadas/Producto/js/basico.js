@@ -11,7 +11,7 @@
         }
     });
 
-
+    loadImageProductoPrincipal();
 });
 
 
@@ -40,3 +40,8 @@ function BoxProducto(data) {
 
 }
 
+
+function loadImageProductoPrincipal() {
+    var idProducto = window.location.href.split("idProducto")[1].substring(1);
+    document.getElementById("ImagenProductoPrincipal").src = "../imgs/" + idProducto + ".jpg";
+}
