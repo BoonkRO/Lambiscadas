@@ -13,6 +13,7 @@ namespace Lambiscadas.Clases.Producto
         public int Stock { get; set; }
         public float Precio { get; set; }
         public int idTipo { get; set; }
+        public bool Activo { get; set; }
 
 
         public Producto()
@@ -20,7 +21,7 @@ namespace Lambiscadas.Clases.Producto
             //EMPTY
         }
 
-        public Producto(int idProducto, string Nombre, string Descripcion, int Stock, float Precio, int idTipo)
+        public Producto(int idProducto, string Nombre, string Descripcion, int Stock, float Precio, int idTipo, bool Activo)
         {
             this.idProducto = idProducto;
             this.Nombre = Nombre;
@@ -28,6 +29,7 @@ namespace Lambiscadas.Clases.Producto
             this.Stock = Stock;
             this.Precio = Precio;
             this.idTipo = idTipo;
+            this.Activo = Activo;
         }
 
 

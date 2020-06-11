@@ -53,7 +53,8 @@ namespace Lambiscadas.Clases
                                      Descripcion = rw.getString("Descripcion"),
                                      Stock = rw.getInt("Stock"),
                                      Precio = rw.getFloat("Precio"),
-                                     idTipo = rw.getInt("idTipo")
+                                     idTipo = rw.getInt("idTipo"),
+                                     Activo = rw.getBoolean("Activo")
                                  }).ToList();
                 }
             }

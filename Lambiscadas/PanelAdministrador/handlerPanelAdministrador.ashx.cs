@@ -1,5 +1,6 @@
 ﻿using Lambiscadas.Clases;
 using Lambiscadas.Clases.PanelAdministrador;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,13 @@ namespace Lambiscadas.PanelAdminstrador
                     string NuevoPrecio = Utilities.getParam(context, "NuevoPrecio");
                     string NuevoStock = Utilities.getParam(context, "NuevoStock");
                     respuesta += GestionPanelAdministrador.GuardarNuevosValoresProducto(idProducto, NuevoNombre, NuevoPrecio, NuevoStock);
+                    break;
+                case "EliminarProducto":
+                    string idProductoEliminar = Utilities.getParam(context, "idProducto");
+                    respuesta += GestionPanelAdministrador.EliminarProducto(idProductoEliminar);
+                    break;
+                case "CargarProductos":
+                    respuesta += JsonConvert.SerializeObject(GestionPanelAdministrador.CargarProductosEnBBDD());
                     break;
             }
 

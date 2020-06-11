@@ -8,8 +8,17 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-4">
+        <br />
+        <div class="col-md-12" id="divBotonAgregarProducto">
+            <button type="button" class="btn btn-primary" onclick="NuevoProducto()">
+                Nuevo Producto
+            </button>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="contenedor4Productos">
+        <div class="row" id="contenedorProductoAdmin0">
+            <%--            <div class="col-md-4">
                 <h4 class="NombreArticuloLink NombreProducto">Funko Pop DeadPool</h4>
                 <img alt="Bootstrap Image Preview" class="ImagenProducto" src="../imgs/1.jpg" id="1" onclick="verArticulo(this.id)">
                 <div class="col-md-12">
@@ -44,17 +53,25 @@
                             </dd>
                         </dl>
                     </div>
+                </div>
+                <div class="col-md-12">
                     <div class="col-md-6">
                         <button type="button" class="btn btn-success" onclick="GuardarValoresProducto(1)">
                             Guardar
                         </button>
                     </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-danger" onclick="EliminarProducto(1)">
+                            Eliminar
+                        </button>
+                    </div>
                 </div>
-            </div>
+            </div>--%>
         </div>
     </div>
 
 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <script src="js/basico.js" type="text/javascript"></script>
 </asp:Content>

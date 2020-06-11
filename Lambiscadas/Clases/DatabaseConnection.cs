@@ -10,6 +10,8 @@ namespace Lambiscadas.Clases
     public class DatabaseConnection
     {
         public static DataTable executeNonQueryDT(string s) => executeNonQueryDT(s, CommandType.Text, ConnectionString.Lambiscadas);
+        public static int executeNonQueryInt(string s) => executeNonQueryInt(s, CommandType.Text, ConnectionString.Lambiscadas);
+        public static int executeScalarInt(string s) => executeScalarInt(s, CommandType.Text, ConnectionString.Lambiscadas);
         public static DataTable executeNonQueryDT(String s, CommandType c, String strConex)
         {
             SqlConnection sql1 = new SqlConnection(strConex);
