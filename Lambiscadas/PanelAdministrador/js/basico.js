@@ -10,7 +10,60 @@
             alert("Algo ha salido mal.");
         }
     });
+    var image = document.getElementById("uploadFile").addEventListener('change', handleFileSelect, false);
 });
+var imageBytes;
+
+function ModalNuevoProducto() {
+    $("#ModalNuevoProducto").modal();
+}
+
+function NuevoProducto() {
+    var Nombre = document.getElementById("NombreNuevo").value;
+    var Precio = document.getElementById("PrecioNuevo").value;
+    var Stock = document.getElementById("StockNuevo").value;
+    
+
+    if (!Nombre || !Precio || !Stock) {
+        alert("Todos los campos tiene que estar rellenados.");
+    } else {
+
+        $.ajax({
+            type: "POST",
+            url: "handlerPanelAdministrador.ashx?op=AñadirNuevoProducto",
+            data: { Nombre: Nombre, Precio: Precio, Stock: Stock, Image: imageBytes },
+            success: function (data) {
+                if (data == "1") {
+                    alert("Nuevo producto '" + Nombre + "' añadido.");
+                    location.reload();
+                } else {
+                    alert("ERROR al añadir el nuevo producto '" + Nombre + "'.");
+                }
+            },
+            error: function () {
+                alert("Algo ha salido mal.");
+            }
+        });
+    }
+}
+
+function handleFileSelect(evt) {
+    var f = evt.target.files[0]; // FileList object
+    var reader = new FileReader();
+    // Closure to capture the file information.
+    reader.onload = (function (theFile) {
+        return function (e) {
+            var binaryData = e.target.result;
+            //Converting Binary Data to base 64
+            var base64String = window.btoa(binaryData);
+            //showing file converted to base64
+            imageBytes = base64String;
+            
+        };
+    })(f);
+    // Read in the image file as a data URL.
+    reader.readAsBinaryString(f);
+}
 
 
 function GuardarValoresProducto(idProducto) {

@@ -43,6 +43,13 @@ namespace Lambiscadas.PanelAdminstrador
                 case "CargarProductos":
                     respuesta += JsonConvert.SerializeObject(GestionPanelAdministrador.CargarProductosEnBBDD());
                     break;
+                case "AñadirNuevoProducto":
+                    string AnadirNombre = Utilities.getParam(context, "Nombre");
+                    string AnadirPrecio = Utilities.getParam(context, "Precio");
+                    string AnadirStock = Utilities.getParam(context, "Stock");
+                    string AnadirImagen = Utilities.getParam(context, "Image");
+                    respuesta += GestionPanelAdministrador.AnadirNuevoProducto(AnadirNombre, AnadirPrecio, AnadirStock, AnadirImagen);
+                    break;
             }
 
             context.Response.ContentType = "text/plain";

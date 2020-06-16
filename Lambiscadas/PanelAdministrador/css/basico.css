@@ -5,8 +5,37 @@
     float:left;
 }
 
-#divNuevoNombre {
+.modal-content {
+    height: 330px;
+}
 
+#NombreNuevo{
+    width: 250px;
+}
+
+#PrecioNuevo {
+    width: 120px;
+}
+
+#divSubirFoto{
+    margin-top: 20px;
+    margin-left: 2%;
+}
+
+.footer {
+    margin-top: 200px;
+}
+
+#BotonAnadir {
+    float: left;
+    margin-left: 5%;
+    width:120px;
+}
+
+#BotonCerrar {
+    float: right;
+    margin-right: 5%;
+    width: 120px;
 }
 
 #NuevoPrecioProducto {

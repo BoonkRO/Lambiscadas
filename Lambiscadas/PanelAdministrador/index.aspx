@@ -10,7 +10,7 @@
     <div class="container-fluid">
         <br />
         <div class="col-md-12" id="divBotonAgregarProducto">
-            <button type="button" class="btn btn-primary" onclick="NuevoProducto()">
+            <button type="button" class="btn btn-primary" onclick="ModalNuevoProducto()">
                 Nuevo Producto
             </button>
         </div>
@@ -67,6 +67,61 @@
                     </div>
                 </div>
             </div>--%>
+        </div>
+    </div>
+
+    <div class="modal" id="ModalNuevoProducto">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Nuevo Producto</h4>
+                </div>
+
+                <div class="modal-body">
+                    <div class="col-md-12">
+                        <div class="col-md-6" id="divNuevoNombre">
+                            <dl>
+                                <dt>Nombre:
+                                </dt>
+                                <dd class="DescProducto">
+                                    <input type="text" id="NombreNuevo" />
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-6" id="divNuevoPrecio">
+                            <dl>
+                                <dt>Precio: (€)
+                                </dt>
+                                <dd class="PrecioProducto">
+                                    <input type="text" id="PrecioNuevo" />
+                                </dd>
+                            </dl>
+                        </div>
+                    
+                        <div class="col-md-6">
+                            <dl>
+                                <dt>Stock:
+                                </dt>
+                                <dd>
+                                    <input type="number" id="StockNuevo" min="0" max="100" value="" />
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-md-12" id="divSubirFoto">
+                        <input type="file" id="uploadFile">
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <button type="button" class="btn btn-primary" id="BotonAnadir" onclick="NuevoProducto()">Añadir</button>
+                    <button type="button" class="btn btn-danger" id="BotonCerrar" data-dismiss="modal">Cancelar</button>
+                </div>
+
+            </div>
         </div>
     </div>
 
