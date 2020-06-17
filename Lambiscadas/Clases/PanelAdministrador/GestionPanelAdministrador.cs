@@ -51,7 +51,7 @@ namespace Lambiscadas.Clases.PanelAdministrador
             {
                 Activo = 1;
             }
-            string query = $@"INSERT INTO Productos OUTPUT INSERTED.idProducto VALUES('{Nombre}', '{Nombre}', {Stock}, {Precio}, 1, {Activo})";
+            string query = $@"INSERT INTO Productos OUTPUT INSERTED.idProducto VALUES('{Nombre}', '{Nombre}', {Stock}, '{Precio}', 1, {Activo})";
             int idProducto = DatabaseConnection.executeScalarInt(query);
 
             if(idProducto > 0)

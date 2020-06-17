@@ -76,7 +76,7 @@
                                         <dl>
                                             <dt>Descripción
                                             </dt>
-                                            <dd class="DescProducto">Funko Pop DeadPool
+                                            <dd class="DescProducto">Funko Pop Squirtle
                                             </dd>
                                         </dl>
                                     </div>
@@ -84,7 +84,7 @@
                                         <dl>
                                             <dt>Precio
                                             </dt>
-                                            <dd class="PrecioProducto">15.95€
+                                            <dd class="PrecioProducto">14.95 €
                                             </dd>
                                         </dl>
                                     </div>
@@ -101,7 +101,7 @@
                                         <dl>
                                             <dt>Descripción
                                             </dt>
-                                            <dd class="DescProducto">Funko Pop DeadPool
+                                            <dd class="DescProducto">Funko Pop Ten Shin Han
                                             </dd>
                                         </dl>
                                     </div>
@@ -109,7 +109,7 @@
                                         <dl>
                                             <dt>Precio
                                             </dt>
-                                            <dd class="PrecioProducto">15.95€
+                                            <dd class="PrecioProducto">11.99 €
                                             </dd>
                                         </dl>
                                     </div>
@@ -119,21 +119,23 @@
                                 </button>
                             </div>
                             <div class="col-md-3">
-                                <h4 class="NombreArticuloLink NombreProducto"></h4>
-                                <img alt="Bootstrap Image Preview" class="ImagenProducto" onclick="verArticulo(this.id)">
+                                <h4 class="NombreArticuloLink NombreProducto">Funko Pop Kai Bubbles</h4>
+                                <img alt="Bootstrap Image Preview" class="ImagenProducto" src="../imgs/4.jpg" id="4" onclick="verArticulo(this.id)">
                                 <div class="col-md-12">
                                     <div class="col-md-8">
                                         <dl>
                                             <dt>Descripción
                                             </dt>
-                                            <dd class="DescProducto"></dd>
+                                            <dd class="DescProducto">Funko Pop Kai Bubbles
+                                            </dd>
                                         </dl>
                                     </div>
                                     <div class="col-md-4">
                                         <dl>
                                             <dt>Precio
                                             </dt>
-                                            <dd class="PrecioProducto"></dd>
+                                            <dd class="PrecioProducto">9.25 €
+                                            </dd>
                                         </dl>
                                     </div>
                                 </div>
@@ -142,14 +144,14 @@
                                 </button>
                             </div>
                             <div class="col-md-3">
-                                <h4 class="NombreArticuloLink NombreProducto"></h4>
-                                <img alt="Bootstrap Image Preview" class="ImagenProducto" onclick="verArticulo(this.id)">
+                                <h4 class="NombreArticuloLink NombreProducto">Funko Pop Bare Bears</h4>
+                                <img alt="Bootstrap Image Preview" class="ImagenProducto" src="../imgs/2.jpg" id="2" onclick="verArticulo(this.id)">
                                 <div class="col-md-12">
                                     <div class="col-md-8">
                                         <dl>
                                             <dt>Descripción
                                             </dt>
-                                            <dd class="DescProducto">Funko Pop DeadPool
+                                            <dd class="DescProducto">Funko Pop Bare Bears
                                             </dd>
                                         </dl>
                                     </div>
@@ -157,7 +159,7 @@
                                         <dl>
                                             <dt>Precio
                                             </dt>
-                                            <dd class="PrecioProducto">15.95€
+                                            <dd class="PrecioProducto">15.99 €
                                             </dd>
                                         </dl>
                                     </div>

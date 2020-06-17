@@ -12,7 +12,7 @@ namespace Lambiscadas.Clases.Producto
             List<Producto> respuesta = new List<Producto>();
             try
             {
-                string query = $@"SELECT idProducto, Nombre, Descripcion, Stock, Precio, idTipo, Activo FROM Productos";
+                string query = $@"SELECT idProducto, Nombre, Descripcion, Stock, Precio, idTipo, Activo FROM Productos WHERE Activo = 1";
                 respuesta = DatabaseConnection.executeNonQueryDT(query).ToListProducto();
                 return respuesta;
             }
