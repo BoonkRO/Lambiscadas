@@ -15,6 +15,7 @@
         <div class="col-md-4 divLogin">
             <h2>Login Lambiscadas</h2>
             <span>Email:</span>
+            <br />
             <input type="text" id="email" />
             <br />
             <span>Contraseña:</span>

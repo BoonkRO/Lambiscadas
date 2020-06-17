@@ -169,6 +169,8 @@
     <Content Include="js\moment.min.js" />
     <Content Include="Producto\js\basico.js" />
     <Content Include="Producto\producto.aspx" />
+    <Content Include="Registro\css\basico.css" />
+    <Content Include="Registro\js\basico.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />

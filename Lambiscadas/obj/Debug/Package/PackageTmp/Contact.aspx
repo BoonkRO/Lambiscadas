@@ -11,6 +11,6 @@
         971265477
     </address>
     <address>
-        <strong>Correo:</strong>   <a href="#">lambiscadascoll@gmail.com</a><br />
+        <strong>Correo:</strong>   <span>lambiscadascoll@gmail.com</span><br />
     </address>
 </asp:Content>

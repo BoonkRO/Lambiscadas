@@ -20,18 +20,19 @@ function ModalNuevoProducto() {
 
 function NuevoProducto() {
     var Nombre = document.getElementById("NombreNuevo").value;
+    var Descripcion = document.getElementById("DescripcionNuevo").value;
     var Precio = document.getElementById("PrecioNuevo").value;
     var Stock = document.getElementById("StockNuevo").value;
     
 
-    if (!Nombre || !Precio || !Stock) {
+    if (!Nombre || !Descripcion || !Precio || !Stock) {
         alert("Todos los campos tiene que estar rellenados.");
     } else {
 
         $.ajax({
             type: "POST",
             url: "handlerPanelAdministrador.ashx?op=AñadirNuevoProducto",
-            data: { Nombre: Nombre, Precio: Precio, Stock: Stock, Image: imageBytes },
+            data: { Nombre: Nombre, Descripcion: Descripcion, Precio: Precio, Stock: Stock, Image: imageBytes },
             success: function (data) {
                 if (data == "1") {
                     alert("Nuevo producto '" + Nombre + "' añadido.");

@@ -90,6 +90,18 @@
                             </dl>
                         </div>
                     </div>
+
+                    <div class="col-md-12">
+                        <div class="col-md-6" id="divNuevoDescripcion">
+                            <dl>
+                                <dt>Descripción:
+                                </dt>
+                                <dd class="DescProducto">
+                                    <input type="text" id="DescripcionNuevo" />
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
                     <div class="col-md-12">
                         <div class="col-md-6" id="divNuevoPrecio">
                             <dl>

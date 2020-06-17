@@ -44,14 +44,14 @@ namespace Lambiscadas.Clases.PanelAdministrador
             return respuesta;
         }
 
-        public static string AnadirNuevoProducto(string Nombre, string Precio, string Stock, string Imagen)
+        public static string AnadirNuevoProducto(string Nombre, string Descripcion, string Precio, string Stock, string Imagen)
         {
             int Activo = 0;
             if(Convert.ToInt32(Stock) > 0)
             {
                 Activo = 1;
             }
-            string query = $@"INSERT INTO Productos OUTPUT INSERTED.idProducto VALUES('{Nombre}', '{Nombre}', {Stock}, '{Precio}', 1, {Activo})";
+            string query = $@"INSERT INTO Productos OUTPUT INSERTED.idProducto VALUES('{Nombre}', '{Descripcion}', {Stock}, '{Precio}', 1, {Activo})";
             int idProducto = DatabaseConnection.executeScalarInt(query);
 
             if(idProducto > 0)

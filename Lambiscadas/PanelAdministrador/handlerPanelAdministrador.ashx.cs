@@ -45,10 +45,11 @@ namespace Lambiscadas.PanelAdminstrador
                     break;
                 case "AñadirNuevoProducto":
                     string AnadirNombre = Utilities.getParam(context, "Nombre");
+                    string AnadirDescripcion = Utilities.getParam(context, "Descripcion");
                     string AnadirPrecio = Utilities.getParam(context, "Precio");
                     string AnadirStock = Utilities.getParam(context, "Stock");
                     string AnadirImagen = Utilities.getParam(context, "Image");
-                    respuesta += GestionPanelAdministrador.AnadirNuevoProducto(AnadirNombre, AnadirPrecio, AnadirStock, AnadirImagen);
+                    respuesta += GestionPanelAdministrador.AnadirNuevoProducto(AnadirNombre, AnadirDescripcion, AnadirPrecio, AnadirStock, AnadirImagen);
                     break;
             }
 
