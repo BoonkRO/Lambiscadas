@@ -20,11 +20,11 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
+                    <div >
                         <h3 class="tituloSeccion">ARTÍCULOS EN PROMOCIÓN
                         </h3>
-                        <div class="row">
-                            <div class="col-md-3">
+                        <div class="row containerItems">
+                            <div class="col-md-4 boxItem">
                                 <h4 class="NombreArticuloLink NombreProducto">Funko Pop DeadPool</h4>
                                 <img alt="Bootstrap Image Preview" class="ImagenProducto" src="../imgs/1.jpg" id="1" onclick="verArticulo(this.id)">
                                 <div class="col-md-12">
@@ -49,7 +49,7 @@
                                     Añadir al Carrito
                                 </button>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-4 boxItem">
                                 <h4 class="NombreArticuloLink NombreProducto">Funko Pop Bare Bears</h4>
                                 <img alt="Bootstrap Image Preview" class="ImagenProducto" src="../imgs/2.jpg" id="2" onclick="verArticulo(this.id)">
                                 <div class="col-md-12">
@@ -74,7 +74,7 @@
                                     Añadir al Carrito
                                 </button>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-4 boxItem">
                                 <h4 class="NombreArticuloLink NombreProducto">Funko Godzilla</h4>
                                 <img alt="Bootstrap Image Preview" class="ImagenProducto" src="../imgs/3.jpg" id="3" onclick="verArticulo(this.id)">
                                 <div class="col-md-12">
@@ -99,7 +99,7 @@
                                     Añadir al Carrito
                                 </button>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-4 boxItem">
                                 <h4 class="NombreArticuloLink NombreProducto">Funko Pop Kai Bubbles</h4>
                                 <img alt="Bootstrap Image Preview" class="ImagenProducto" src="../imgs/4.jpg" id="4" onclick="verArticulo(this.id)">
                                 <div class="col-md-12">
@@ -132,7 +132,7 @@
                         <h3 class="tituloSeccion">RECOMENDACIONES
                         </h3>
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-3 boxItem">
                                 <h4 class="NombreArticuloLink NombreProducto">Funko Pop Squirtle</h4>
                                 <img alt="Bootstrap Image Preview" class="ImagenProducto" src="../imgs/5.jpg" id="5" onclick="verArticulo(this.id)">
                                 <div class="col-md-12">
@@ -158,7 +158,7 @@
                                     Añadir al Carrito
                                 </button>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3 boxItem">
                                 <h4 class="NombreArticuloLink NombreProducto">Funko Pop Ten Shin Han</h4>
                                 <img alt="Bootstrap Image Preview" class="ImagenProducto" src="../imgs/6.jpg" id="6" onclick="verArticulo(this.id)">
                                 <div class="col-md-12">
@@ -184,7 +184,7 @@
                                     Añadir al Carrito
                                 </button>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3 boxItem">
                                 <h4 class="NombreArticuloLink NombreProducto">Funko Pop Mr Burns</h4>
                                 <img alt="Bootstrap Image Preview" class="ImagenProducto" src="../imgs/1003.jpg" id="1003" onclick="verArticulo(this.id)">
                                 <div class="col-md-12">
@@ -210,7 +210,7 @@
                                     Añadir al Carrito
                                 </button>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3 boxItem">
                                 <h4 class="NombreArticuloLink NombreProducto">Funko Pop Capitan America</h4>
                                 <img alt="Bootstrap Image Preview" class="ImagenProducto" src="../imgs/1004.jpg" id="1004" onclick="verArticulo(this.id)">
                                 <div class="col-md-12">
